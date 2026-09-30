@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI FAQ Chatbot</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            background: linear-gradient(
+                135deg,
+                #141e30,
+                #243b55
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            width: 90%;
+            max-width: 700px;
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            background: #243b55;
+
+            color: white;
+
+            padding: 25px;
+
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+        }
+
+        .header p {
+            margin: 0;
+
+            opacity: 0.9;
+        }
+
+        .chat {
+            padding: 30px;
+
+            min-height: 350px;
+        }
+
+        .message {
+            margin-bottom: 20px;
+
+            padding: 15px;
+
+            border-radius: 12px;
+
+            line-height: 1.5;
+        }
+
+        .user {
+            background: #e8f0fe;
+        }
+
+        .bot {
+            background: #f1f1f1;
+        }
+
+        form {
+            display: flex;
+
+            gap: 10px;
+
+            padding: 20px;
+
+            border-top: 1px solid #ddd;
+        }
+
+        input {
+            flex: 1;
+
+            padding: 14px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 10px;
+
+            font-size: 16px;
+        }
+
+        button {
+            padding: 14px 22px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #243b55;
+
+            color: white;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #141e30;
+        }
+
+        .examples {
+            padding: 0 30px 20px;
+
+            color: #666;
+
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            form {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="chat-container">
+
+
+    <div class="header">
+
+        <h1>🤖 AI FAQ Chatbot</h1>
+
+        <p>
+            Ask questions about Artificial Intelligence
+        </p>
+
+    </div>
+
+
+    <div class="chat">
+
+        {% if question %}
+
+            <div class="message user">
+
+                <strong>👤 You:</strong>
+
+                <br>
+
+                {{ question }}
+
+            </div>
+
+
+            <div class="message bot">
+
+                <strong>🤖 Bot:</strong>
+
+                <br>
+
+                {{ response }}
+
+            </div>
+
+        {% else %}
+
+            <div class="message bot">
+
+                <strong>🤖 Bot:</strong>
+
+                <br>
+
+                Hello! 👋 Ask me a question about
+                AI, Machine Learning, NLP or Deep Learning.
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <div class="examples">
+
+        <strong>Try asking:</strong>
+
+        "What is machine learning?"
+
+        or
+
+        "What is NLP?"
+
+    </div>
+
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="question"
+            placeholder="Ask your question..."
+            required
+        >
+
+        <button type="submit">
+            Send
+        </button>
+
+    </form>
+
+
+</div>
+
+
+</body>
+
+</html>

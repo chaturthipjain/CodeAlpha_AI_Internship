@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What is artificial intelligence?",
+        "answer": "Artificial Intelligence is a field of computer science that enables machines to perform tasks that normally require human intelligence."
+    },
+    {
+        "question": "What is machine learning?",
+        "answer": "Machine Learning is a branch of AI that allows computers to learn patterns from data and make predictions or decisions."
+    },
+    {
+        "question": "What is deep learning?",
+        "answer": "Deep Learning is a subset of machine learning that uses neural networks with multiple layers to learn complex patterns."
+    },
+    {
+        "question": "What is Python?",
+        "answer": "Python is a high-level programming language widely used in artificial intelligence, machine learning, data science and web development."
+    },
+    {
+        "question": "What is NLP?",
+        "answer": "Natural Language Processing is a field of AI that enables computers to understand and process human language."
+    },
+    {
+        "question": "What is computer vision?",
+        "answer": "Computer Vision is an AI field that enables computers to understand and analyze images and videos."
+    },
+    {
+        "question": "What is an AI chatbot?",
+        "answer": "An AI chatbot is a software application that interacts with users using natural language and provides automated responses."
+    },
+    {
+        "question": "What is supervised learning?",
+        "answer": "Supervised learning is a machine learning approach where a model learns from labeled training data."
+    },
+    {
+        "question": "What is unsupervised learning?",
+        "answer": "Unsupervised learning finds patterns or structures in data without using labeled outputs."
+    },
+    {
+        "question": "What is a dataset?",
+        "answer": "A dataset is a collection of data used for analysis, training machine learning models or testing applications."
+    }
+]
